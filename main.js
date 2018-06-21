@@ -1,13 +1,12 @@
-function isTriangle(a,b,c)
-{
-  let l = a+b+c;
-  if(l <= 0){
-   return false;
-  }else if((l-a >a)&&(l-b >b)&&(l-c >c)){
-    return true;
-  }else{
-  	return false;
-  }
+function alphabetPosition(text) {
+	text = text.toLowerCase();
+	let list = '';
+	for(let i = 0; i < text.length; i++){
+		if(text[i].charCodeAt() >= 97 && text[i].charCodeAt() <= 122 ){
+			list += (text[i].charCodeAt() - 96) + ' '
+		}
+	}
+	return list.trim()
 }
 
-console.log(isTriangle(1,4,2));
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
