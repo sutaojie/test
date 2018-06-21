@@ -1,12 +1,15 @@
-function getCount(str) {
-  let vowelsCount = 0;
-  let regex = /a|e|i|o|u/;
-  for(let i = 0; i < str.length; i++){
-  		if(regex.test(str[i])){
-  			vowelsCount += 1;
-  		}
-    }
-  return vowelsCount;
+var isSquare = function(n){
+  if(n < 0){
+    return false;
+  }else if(true){
+  	let temp = Math.sqrt(n);
+  	//正整数判断
+  	if(~~temp === temp){
+  		return true;
+  	}else{
+  		return false;
+  	}
+  }
 }
 
-getCount('abba')
+console.log(isSquare(16));
